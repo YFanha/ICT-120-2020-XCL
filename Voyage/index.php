@@ -1,4 +1,4 @@
-<?php require_once "store.php"; ?>
+<?php require_once "includes/store.php"; ?>
 Cette page rassemble toutes les informations nécessaires pour l'organisation de notre voyage d'étude en troisième année.
 <form method="post">
     Les gens:<br>
@@ -118,4 +118,4 @@ Cette page rassemble toutes les informations nécessaires pour l'organisation de
     Titre:<input type="text" name="txtTitle[09]" id="txtTitle09">Description:<textarea name="txtDesc[09]" id="txtDesc09"></textarea>Date:<input type="text" name="txtActDate[09]" id="txtActDate09">Heure:<input type="text" name="txtActTime[09]" id="txtActTime09">Prix:<input type="text" name="txtActPrice[09]" id="txtActPrice09">Transport:<input type="text" name="txtActTrsp[09]" id="txtActTrsp09">Rendez-vous:<input type="text" name="txtRDV[09]" id="txtRDV09">Image:<input type="text" name="txtActImg[09]" id="txtActImg09"><img id="imgActImg09" class="actimg" /><br>
     <input type="submit" value="Ok" name="cmdSave"><input type="checkbox" name="showdata" title="Remise à zéro de tous les champs qui ne sont pas formatés correctement">Reset
 </form>
-<script src="reload.js"></script>
+<script src="js/reload.js"></script>

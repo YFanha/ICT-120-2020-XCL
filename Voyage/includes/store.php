@@ -12,7 +12,7 @@
 // 2. All input fields have an id that corresponds to the index, i.e: <input name='input[15]' id='input15'
 
 if (isset($_POST['cmdSave'])) {
-    $fp = fopen('reload.js', 'w');
+    $fp = fopen('js/reload.js', 'w');
     foreach($_POST as $fkey => $post) {
         foreach ($post as $ikey => $value) {
             if (strlen($value) > 0) {
