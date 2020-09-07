@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nombre Mystère</title>
+    <style>
+        #q, button{
+            background-color: aqua;
+            text-align: center;
+            cursor: grab;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="q" onclick="jeuxMystere()">Devine le nombre mister!</h1>
+    <!--<button onclick="jeuxMystere()">Joue!</button>-->
+
+
+</body>
+<script type="text/javascript">
+
+    /*function jeuxMystere(){*/
+        var nombreMystere = Math.floor(Math.random()*100);
+
+        var nombreChoisi,
+            tentative = 0;
+
+        console.log("nombre mystere = " + nombreMystere);
+        do{
+            tentative++;
+            nombreChoisi = prompt("Quelle est le nombre mystère ?");
+            console.log(nombreChoisi)
+
+            if(nombreChoisi > nombreMystere){
+                console.log("C'est plus petit.")
+
+            }
+            if (nombreChoisi < nombreMystere){
+                console.log("C'est plus grand.")
+
+            }
+            console.log(tentative);
+        }while(nombreMystere != nombreChoisi)
+
+        /*alert("Vous avez trouvé le bon nombre en " + tentative + " tentative !!!");*/
+
+        document.write("<h2>Vous avez trouvé le bon nombre en " + tentative + " tentative !!!");
+    /*}*/
+</script>
+</html>
