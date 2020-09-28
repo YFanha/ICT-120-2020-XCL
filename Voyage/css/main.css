@@ -24,9 +24,12 @@
 #h1Titre{
     /*background-color: aqua;*/
     padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
     width: max-content;
     margin: auto;
     border-right: 3px solid black;
+    border-bottom: 3px solid black;
 }
 /*****************/
 #navMain{
@@ -44,16 +47,21 @@
     height: 50px;
     width: 100px;
 
-    /*border: 2px solid black;
-    box-shadow: 4px 4px 5px black;*/
+    border: 2px solid black;
+    box-shadow: 4px 4px 5px black;
 }
 
+.button:active{
+    background-color: grey;
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 5px black;
+}
+
+.rotate180{
+    transform: rotateY(180deg);
+}
 
 /*******/
 .hidden{
     display: none;
-}
-
-.show{
-    display: flex;
 }
