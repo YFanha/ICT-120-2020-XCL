@@ -1,11 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
     --height-header: 100px;
     --height-nav: 300px;
+    --width-input: 280px;
+    --width-checkbox: 100px;
 }
 
 #header{
@@ -56,12 +59,118 @@
     transform: translate(5px, 5px);
     box-shadow: 0 0 5px black;
 }
-
 .rotate180{
     transform: rotateY(180deg);
 }
+/***********************/
+.divLabels{
+    /*background-color: beige;*/
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    margin-top: 0;
+    width: 100%;
+}
 
-/*******/
+.divLabels label{
+    /*background-color: aqua;*/
+    font-size: 1.45em;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.divInputs{
+    width: 100%;
+}
+
+.divInputs input{
+    margin: 5px;
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+.divLabels,
+.divInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.divLabels label,
+.divInputs input{
+    width: var(--width-input);
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+    /*background-color: brown;*/
+}
+
+.divLabels .radio,
+.divInputs input[type=checkbox]{
+    width: var(--width-checkbox);
+}
+
+.btnAdd{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    /*border-radius: 100%;*/
+    border: 3px solid darkgray;
+    cursor: pointer;
+    font-size: 4em;
+    text-align: center;
+}
+.plus{
+    transform: translateY(-10px);
+    position: absolute;
+}
+
+
 .hidden{
     display: none;
 }
+/***********************************/
+/*input[type=checkbox],
+.divLabels label:last-child{
+    width: var(--width-checkbox);
+}*/
+
+/*.container{
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.divColumn{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: 100%;
+    border: 2px solid black;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.divColumn label{
+    background-color: red;
+    text-align: center;
+    align-items: center;
+    font-size: 1.45em;
+}
+
+.divColumn input[type=text]{
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 5px;    
+}
+.divColumn input[type=checkbox]{
+    height: 40px;
+}
+
+.divColumn label,
+.divColumn input{
+    font-weight: bold;
+    height: 30px;
+}*/

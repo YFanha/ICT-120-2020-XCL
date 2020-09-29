@@ -1,83 +1,57 @@
-<!--Yann Fanha-->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Voyage</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/script.js"></script>
-</head>
-<body>
-    <img src="pictures/logoCPNV.png" id="imgCPNV">
-    <div id="header">
-        <h1 id="h1Titre">Voyage d'étude</h1>
-    </div>
-
-    <nav id="navMain">
-        <button id="btnParticipants" class="button">Participants</button>
-        <button id="btnTransports" class="button">Transports</button>
-        <button id="btnHebergement" class="button">Hébérgement</button>
-        <button id="btnActivites" class="button">Activités</button>
-    </nav>
-
-    <?php require_once "includes/store.php"; ?>
-    <!--Cette page rassemble toutes les informations nécessaires pour l'organisation de notre voyage d'étude en troisième année. -->
-    <form method="post">
-
+<form method="post">
         <div id="divParticipants" class="hidden">
-                <!--<div class="container">
-                    <div class="divColumn">
-                        <label>Adresse</label>
-                        <input type="text" id="txtAddress00" name="txtAddress[00]">
-                    </div>
-                    <div class="divColumn">
-                        <label>Code postal</label>
-                        <input type="text" id="txtNPA00" name="txtNPA[00]">
-                    </div>
-                    <div class="divColumn">
-                        <label>Ville</label>
-                        <input type="text" name="txtCity[00]" id="txtCity00">
-                    </div>
-                    <div class="divColumn">
-                        <label>Prénom</label>
-                        <input type="text" name="txtFirstName[00]" id="txtFirstName00">
-                    </div>
-                    <div class="divColumn">
-                        <label>Nom</label>
-                        <input type="text" name="txtLastName[00]" id="txtLastName00">
-                    </div>
-                    <div class="divColumn">
-                        <label>Numéro de portable</label>
-                        <input type="text" name="txtPhone[00]" id="txtPhone00">
-                    </div>
-                    <div class="divColumn">
-                        <label>Prof</label>
-                        <input type="checkbox" name="txtprof[00]" id="txtprof00">
-                    </div>
-                </div>
-            </div>-->
-            <div class="divLabels">
-                <label>Adresse</label>
-                <label>Code postal</label>
-                <label>Ville</label>
-                <label>Prénom</label>
-                <label>Nom</label>
-                <label>Numéro de portable</label>
-                <label class="radio">Prof</label>
-            </div>
-            <div class="divInputs">
-                <input type="text" id="txtAddress00" name="txtAddress[00]">
-                <input type="text" id="txtNPA00" name="txtNPA[00]">
-                <input type="text" name="txtCity[00]" id="txtCity00">
-                <input type="text" name="txtFirstName[00]" id="txtFirstName00">
-                <input type="text" name="txtLastName[00]" id="txtLastName00">
-                <input type="text" name="txtPhone[00]" id="txtPhone00">
-                <input type="checkbox" name="txtprof[00]" id="txtprof00">
-            </div>
-            <button class="btnAdd" id="addParticipants"><span>+</span></button>
+            Les gens:<br>
+            Adresse:<input type="text" id="txtAddress00" name="txtAddress[00]">Code postal:<input type="text" id="txtNPA00" name="txtNPA[00]">Ville:<input type="text" name="txtCity[00]" id="txtCity00">Prénom: <input type="text" name="txtFirstName[00]" id="txtFirstName00">Nom:<input type="text" name="txtLastName[00]" id="txtLastName00">Numéro de portable:<input type="text" name="txtPhone[00]" id="txtPhone00">Prof ou élève:<input type="text" name="txtprof[00]" id="txtprof00"><br>
+            Adresse:<input type="text" id="txtAddress01" name="txtAddress[01]">Code postal:<input type="text" id="txtNPA01" name="txtNPA[01]">Ville:<input type="text" name="txtCity[01]" id="txtCity01">Prénom: <input type="text" name="txtFirstName[01]" id="txtFirstName01">Nom:<input type="text" name="txtLastName[01]" id="txtLastName01">Numéro de portable:<input type="text" name="txtPhone[01]" id="txtPhone01">Prof ou élève:<input type="text" name="txtprof[01]" id="txtprof01"><br>
+            Adresse:<input type="text" id="txtAddress02" name="txtAddress[02]">Code postal:<input type="text" id="txtNPA02" name="txtNPA[02]">Ville:<input type="text" name="txtCity[02]" id="txtCity02">Prénom: <input type="text" name="txtFirstName[02]" id="txtFirstName02">Nom:<input type="text" name="txtLastName[02]" id="txtLastName02">Numéro de portable:<input type="text" name="txtPhone[02]" id="txtPhone02">Prof ou élève:<input type="text" name="txtprof[02]" id="txtprof02"><br>
+            Adresse:<input type="text" id="txtAddress03" name="txtAddress[03]">Code postal:<input type="text" id="txtNPA03" name="txtNPA[03]">Ville:<input type="text" name="txtCity[03]" id="txtCity03">Prénom: <input type="text" name="txtFirstName[03]" id="txtFirstName03">Nom:<input type="text" name="txtLastName[03]" id="txtLastName03">Numéro de portable:<input type="text" name="txtPhone[03]" id="txtPhone03">Prof ou élève:<input type="text" name="txtprof[03]" id="txtprof03"><br>
+            Adresse:<input type="text" id="txtAddress04" name="txtAddress[04]">Code postal:<input type="text" id="txtNPA04" name="txtNPA[04]">Ville:<input type="text" name="txtCity[04]" id="txtCity04">Prénom: <input type="text" name="txtFirstName[04]" id="txtFirstName04">Nom:<input type="text" name="txtLastName[04]" id="txtLastName04">Numéro de portable:<input type="text" name="txtPhone[04]" id="txtPhone04">Prof ou élève:<input type="text" name="txtprof[04]" id="txtprof04"><br>
+            Adresse:<input type="text" id="txtAddress05" name="txtAddress[05]">Code postal:<input type="text" id="txtNPA05" name="txtNPA[05]">Ville:<input type="text" name="txtCity[05]" id="txtCity05">Prénom: <input type="text" name="txtFirstName[05]" id="txtFirstName05">Nom:<input type="text" name="txtLastName[05]" id="txtLastName05">Numéro de portable:<input type="text" name="txtPhone[05]" id="txtPhone05">Prof ou élève:<input type="text" name="txtprof[05]" id="txtprof05"><br>
+            Adresse:<input type="text" id="txtAddress06" name="txtAddress[06]">Code postal:<input type="text" id="txtNPA06" name="txtNPA[06]">Ville:<input type="text" name="txtCity[06]" id="txtCity06">Prénom: <input type="text" name="txtFirstName[06]" id="txtFirstName06">Nom:<input type="text" name="txtLastName[06]" id="txtLastName06">Numéro de portable:<input type="text" name="txtPhone[06]" id="txtPhone06">Prof ou élève:<input type="text" name="txtprof[06]" id="txtprof06"><br>
+            Adresse:<input type="text" id="txtAddress07" name="txtAddress[07]">Code postal:<input type="text" id="txtNPA07" name="txtNPA[07]">Ville:<input type="text" name="txtCity[07]" id="txtCity07">Prénom: <input type="text" name="txtFirstName[07]" id="txtFirstName07">Nom:<input type="text" name="txtLastName[07]" id="txtLastName07">Numéro de portable:<input type="text" name="txtPhone[07]" id="txtPhone07">Prof ou élève:<input type="text" name="txtprof[07]" id="txtprof07"><br>
+            Adresse:<input type="text" id="txtAddress08" name="txtAddress[08]">Code postal:<input type="text" id="txtNPA08" name="txtNPA[08]">Ville:<input type="text" name="txtCity[08]" id="txtCity08">Prénom: <input type="text" name="txtFirstName[08]" id="txtFirstName08">Nom:<input type="text" name="txtLastName[08]" id="txtLastName08">Numéro de portable:<input type="text" name="txtPhone[08]" id="txtPhone08">Prof ou élève:<input type="text" name="txtprof[08]" id="txtprof08"><br>
+            Adresse:<input type="text" id="txtAddress09" name="txtAddress[09]">Code postal:<input type="text" id="txtNPA09" name="txtNPA[09]">Ville:<input type="text" name="txtCity[09]" id="txtCity09">Prénom: <input type="text" name="txtFirstName[09]" id="txtFirstName09">Nom:<input type="text" name="txtLastName[09]" id="txtLastName09">Numéro de portable:<input type="text" name="txtPhone[09]" id="txtPhone09">Prof ou élève:<input type="text" name="txtprof[09]" id="txtprof09"><br>
+            Adresse:<input type="text" id="txtAddress10" name="txtAddress[10]">Code postal:<input type="text" id="txtNPA10" name="txtNPA[10]">Ville:<input type="text" name="txtCity[10]" id="txtCity10">Prénom: <input type="text" name="txtFirstName[10]" id="txtFirstName10">Nom:<input type="text" name="txtLastName[10]" id="txtLastName10">Numéro de portable:<input type="text" name="txtPhone[10]" id="txtPhone10">Prof ou élève:<input type="text" name="txtprof[10]" id="txtprof10"><br>
+            Adresse:<input type="text" id="txtAddress11" name="txtAddress[11]">Code postal:<input type="text" id="txtNPA11" name="txtNPA[11]">Ville:<input type="text" name="txtCity[11]" id="txtCity11">Prénom: <input type="text" name="txtFirstName[11]" id="txtFirstName11">Nom:<input type="text" name="txtLastName[11]" id="txtLastName11">Numéro de portable:<input type="text" name="txtPhone[11]" id="txtPhone11">Prof ou élève:<input type="text" name="txtprof[11]" id="txtprof11"><br>
+            Adresse:<input type="text" id="txtAddress12" name="txtAddress[12]">Code postal:<input type="text" id="txtNPA12" name="txtNPA[12]">Ville:<input type="text" name="txtCity[12]" id="txtCity12">Prénom: <input type="text" name="txtFirstName[12]" id="txtFirstName12">Nom:<input type="text" name="txtLastName[12]" id="txtLastName12">Numéro de portable:<input type="text" name="txtPhone[12]" id="txtPhone12">Prof ou élève:<input type="text" name="txtprof[12]" id="txtprof12"><br>
+            Adresse:<input type="text" id="txtAddress13" name="txtAddress[13]">Code postal:<input type="text" id="txtNPA13" name="txtNPA[13]">Ville:<input type="text" name="txtCity[13]" id="txtCity13">Prénom: <input type="text" name="txtFirstName[13]" id="txtFirstName13">Nom:<input type="text" name="txtLastName[13]" id="txtLastName13">Numéro de portable:<input type="text" name="txtPhone[13]" id="txtPhone13">Prof ou élève:<input type="text" name="txtprof[13]" id="txtprof13"><br>
+            Adresse:<input type="text" id="txtAddress14" name="txtAddress[14]">Code postal:<input type="text" id="txtNPA14" name="txtNPA[14]">Ville:<input type="text" name="txtCity[14]" id="txtCity14">Prénom: <input type="text" name="txtFirstName[14]" id="txtFirstName14">Nom:<input type="text" name="txtLastName[14]" id="txtLastName14">Numéro de portable:<input type="text" name="txtPhone[14]" id="txtPhone14">Prof ou élève:<input type="text" name="txtprof[14]" id="txtprof14"><br>
+            Adresse:<input type="text" id="txtAddress15" name="txtAddress[15]">Code postal:<input type="text" id="txtNPA15" name="txtNPA[15]">Ville:<input type="text" name="txtCity[15]" id="txtCity15">Prénom: <input type="text" name="txtFirstName[15]" id="txtFirstName15">Nom:<input type="text" name="txtLastName[15]" id="txtLastName15">Numéro de portable:<input type="text" name="txtPhone[15]" id="txtPhone15">Prof ou élève:<input type="text" name="txtprof[15]" id="txtprof15"><br>
+            Adresse:<input type="text" id="txtAddress16" name="txtAddress[16]">Code postal:<input type="text" id="txtNPA16" name="txtNPA[16]">Ville:<input type="text" name="txtCity[16]" id="txtCity16">Prénom: <input type="text" name="txtFirstName[16]" id="txtFirstName16">Nom:<input type="text" name="txtLastName[16]" id="txtLastName16">Numéro de portable:<input type="text" name="txtPhone[16]" id="txtPhone16">Prof ou élève:<input type="text" name="txtprof[16]" id="txtprof16"><br>
+            Adresse:<input type="text" id="txtAddress17" name="txtAddress[17]">Code postal:<input type="text" id="txtNPA17" name="txtNPA[17]">Ville:<input type="text" name="txtCity[17]" id="txtCity17">Prénom: <input type="text" name="txtFirstName[17]" id="txtFirstName17">Nom:<input type="text" name="txtLastName[17]" id="txtLastName17">Numéro de portable:<input type="text" name="txtPhone[17]" id="txtPhone17">Prof ou élève:<input type="text" name="txtprof[17]" id="txtprof17"><br>
+            Adresse:<input type="text" id="txtAddress18" name="txtAddress[18]">Code postal:<input type="text" id="txtNPA18" name="txtNPA[18]">Ville:<input type="text" name="txtCity[18]" id="txtCity18">Prénom: <input type="text" name="txtFirstName[18]" id="txtFirstName18">Nom:<input type="text" name="txtLastName[18]" id="txtLastName18">Numéro de portable:<input type="text" name="txtPhone[18]" id="txtPhone18">Prof ou élève:<input type="text" name="txtprof[18]" id="txtprof18"><br>
+            Adresse:<input type="text" id="txtAddress19" name="txtAddress[19]">Code postal:<input type="text" id="txtNPA19" name="txtNPA[19]">Ville:<input type="text" name="txtCity[19]" id="txtCity19">Prénom: <input type="text" name="txtFirstName[19]" id="txtFirstName19">Nom:<input type="text" name="txtLastName[19]" id="txtLastName19">Numéro de portable:<input type="text" name="txtPhone[19]" id="txtPhone19">Prof ou élève:<input type="text" name="txtprof[19]" id="txtprof19"><br>
+            Adresse:<input type="text" id="txtAddress20" name="txtAddress[20]">Code postal:<input type="text" id="txtNPA20" name="txtNPA[20]">Ville:<input type="text" name="txtCity[20]" id="txtCity20">Prénom: <input type="text" name="txtFirstName[20]" id="txtFirstName20">Nom:<input type="text" name="txtLastName[20]" id="txtLastName20">Numéro de portable:<input type="text" name="txtPhone[20]" id="txtPhone20">Prof ou élève:<input type="text" name="txtprof[20]" id="txtprof20"><br>
+            Adresse:<input type="text" id="txtAddress21" name="txtAddress[21]">Code postal:<input type="text" id="txtNPA21" name="txtNPA[21]">Ville:<input type="text" name="txtCity[21]" id="txtCity21">Prénom: <input type="text" name="txtFirstName[21]" id="txtFirstName21">Nom:<input type="text" name="txtLastName[21]" id="txtLastName21">Numéro de portable:<input type="text" name="txtPhone[21]" id="txtPhone21">Prof ou élève:<input type="text" name="txtprof[21]" id="txtprof21"><br>
+            Adresse:<input type="text" id="txtAddress22" name="txtAddress[22]">Code postal:<input type="text" id="txtNPA22" name="txtNPA[22]">Ville:<input type="text" name="txtCity[22]" id="txtCity22">Prénom: <input type="text" name="txtFirstName[22]" id="txtFirstName22">Nom:<input type="text" name="txtLastName[22]" id="txtLastName22">Numéro de portable:<input type="text" name="txtPhone[22]" id="txtPhone22">Prof ou élève:<input type="text" name="txtprof[22]" id="txtprof22"><br>
+            Adresse:<input type="text" id="txtAddress23" name="txtAddress[23]">Code postal:<input type="text" id="txtNPA23" name="txtNPA[23]">Ville:<input type="text" name="txtCity[23]" id="txtCity23">Prénom: <input type="text" name="txtFirstName[23]" id="txtFirstName23">Nom:<input type="text" name="txtLastName[23]" id="txtLastName23">Numéro de portable:<input type="text" name="txtPhone[23]" id="txtPhone23">Prof ou élève:<input type="text" name="txtprof[23]" id="txtprof23"><br>
+            Adresse:<input type="text" id="txtAddress24" name="txtAddress[24]">Code postal:<input type="text" id="txtNPA24" name="txtNPA[24]">Ville:<input type="text" name="txtCity[24]" id="txtCity24">Prénom: <input type="text" name="txtFirstName[24]" id="txtFirstName24">Nom:<input type="text" name="txtLastName[24]" id="txtLastName24">Numéro de portable:<input type="text" name="txtPhone[24]" id="txtPhone24">Prof ou élève:<input type="text" name="txtprof[24]" id="txtprof24"><br>
+            Adresse:<input type="text" id="txtAddress25" name="txtAddress[25]">Code postal:<input type="text" id="txtNPA25" name="txtNPA[25]">Ville:<input type="text" name="txtCity[25]" id="txtCity25">Prénom: <input type="text" name="txtFirstName[25]" id="txtFirstName25">Nom:<input type="text" name="txtLastName[25]" id="txtLastName25">Numéro de portable:<input type="text" name="txtPhone[25]" id="txtPhone25">Prof ou élève:<input type="text" name="txtprof[25]" id="txtprof25"><br>
+            Adresse:<input type="text" id="txtAddress26" name="txtAddress[26]">Code postal:<input type="text" id="txtNPA26" name="txtNPA[26]">Ville:<input type="text" name="txtCity[26]" id="txtCity26">Prénom: <input type="text" name="txtFirstName[26]" id="txtFirstName26">Nom:<input type="text" name="txtLastName[26]" id="txtLastName26">Numéro de portable:<input type="text" name="txtPhone[26]" id="txtPhone26">Prof ou élève:<input type="text" name="txtprof[26]" id="txtprof26"><br>
+            Adresse:<input type="text" id="txtAddress27" name="txtAddress[27]">Code postal:<input type="text" id="txtNPA27" name="txtNPA[27]">Ville:<input type="text" name="txtCity[27]" id="txtCity27">Prénom: <input type="text" name="txtFirstName[27]" id="txtFirstName27">Nom:<input type="text" name="txtLastName[27]" id="txtLastName27">Numéro de portable:<input type="text" name="txtPhone[27]" id="txtPhone27">Prof ou élève:<input type="text" name="txtprof[27]" id="txtprof27"><br>
+            Adresse:<input type="text" id="txtAddress28" name="txtAddress[28]">Code postal:<input type="text" id="txtNPA28" name="txtNPA[28]">Ville:<input type="text" name="txtCity[28]" id="txtCity28">Prénom: <input type="text" name="txtFirstName[28]" id="txtFirstName28">Nom:<input type="text" name="txtLastName[28]" id="txtLastName28">Numéro de portable:<input type="text" name="txtPhone[28]" id="txtPhone28">Prof ou élève:<input type="text" name="txtprof[28]" id="txtprof28"><br>
+            Adresse:<input type="text" id="txtAddress29" name="txtAddress[29]">Code postal:<input type="text" id="txtNPA29" name="txtNPA[29]">Ville:<input type="text" name="txtCity[29]" id="txtCity29">Prénom: <input type="text" name="txtFirstName[29]" id="txtFirstName29">Nom:<input type="text" name="txtLastName[29]" id="txtLastName29">Numéro de portable:<input type="text" name="txtPhone[29]" id="txtPhone29">Prof ou élève:<input type="text" name="txtprof[29]" id="txtprof29"><br>
+            Adresse:<input type="text" id="txtAddress30" name="txtAddress[30]">Code postal:<input type="text" id="txtNPA30" name="txtNPA[30]">Ville:<input type="text" name="txtCity[30]" id="txtCity30">Prénom: <input type="text" name="txtFirstName[30]" id="txtFirstName30">Nom:<input type="text" name="txtLastName[30]" id="txtLastName30">Numéro de portable:<input type="text" name="txtPhone[30]" id="txtPhone30">Prof ou élève:<input type="text" name="txtprof[30]" id="txtprof30"><br>
+            Adresse:<input type="text" id="txtAddress31" name="txtAddress[31]">Code postal:<input type="text" id="txtNPA31" name="txtNPA[31]">Ville:<input type="text" name="txtCity[31]" id="txtCity31">Prénom: <input type="text" name="txtFirstName[31]" id="txtFirstName31">Nom:<input type="text" name="txtLastName[31]" id="txtLastName31">Numéro de portable:<input type="text" name="txtPhone[31]" id="txtPhone31">Prof ou élève:<input type="text" name="txtprof[31]" id="txtprof31"><br>
+            Adresse:<input type="text" id="txtAddress32" name="txtAddress[32]">Code postal:<input type="text" id="txtNPA32" name="txtNPA[32]">Ville:<input type="text" name="txtCity[32]" id="txtCity32">Prénom: <input type="text" name="txtFirstName[32]" id="txtFirstName32">Nom:<input type="text" name="txtLastName[32]" id="txtLastName32">Numéro de portable:<input type="text" name="txtPhone[32]" id="txtPhone32">Prof ou élève:<input type="text" name="txtprof[32]" id="txtprof32"><br>
+            Adresse:<input type="text" id="txtAddress33" name="txtAddress[33]">Code postal:<input type="text" id="txtNPA33" name="txtNPA[33]">Ville:<input type="text" name="txtCity[33]" id="txtCity33">Prénom: <input type="text" name="txtFirstName[33]" id="txtFirstName33">Nom:<input type="text" name="txtLastName[33]" id="txtLastName33">Numéro de portable:<input type="text" name="txtPhone[33]" id="txtPhone33">Prof ou élève:<input type="text" name="txtprof[33]" id="txtprof33"><br>
+            Adresse:<input type="text" id="txtAddress34" name="txtAddress[34]">Code postal:<input type="text" id="txtNPA34" name="txtNPA[34]">Ville:<input type="text" name="txtCity[34]" id="txtCity34">Prénom: <input type="text" name="txtFirstName[34]" id="txtFirstName34">Nom:<input type="text" name="txtLastName[34]" id="txtLastName34">Numéro de portable:<input type="text" name="txtPhone[34]" id="txtPhone34">Prof ou élève:<input type="text" name="txtprof[34]" id="txtprof34"><br>
+            Adresse:<input type="text" id="txtAddress35" name="txtAddress[35]">Code postal:<input type="text" id="txtNPA35" name="txtNPA[35]">Ville:<input type="text" name="txtCity[35]" id="txtCity35">Prénom: <input type="text" name="txtFirstName[35]" id="txtFirstName35">Nom:<input type="text" name="txtLastName[35]" id="txtLastName35">Numéro de portable:<input type="text" name="txtPhone[35]" id="txtPhone35">Prof ou élève:<input type="text" name="txtprof[35]" id="txtprof35"><br>
+            Adresse:<input type="text" id="txtAddress36" name="txtAddress[36]">Code postal:<input type="text" id="txtNPA36" name="txtNPA[36]">Ville:<input type="text" name="txtCity[36]" id="txtCity36">Prénom: <input type="text" name="txtFirstName[36]" id="txtFirstName36">Nom:<input type="text" name="txtLastName[36]" id="txtLastName36">Numéro de portable:<input type="text" name="txtPhone[36]" id="txtPhone36">Prof ou élève:<input type="text" name="txtprof[36]" id="txtprof36"><br>
+            Adresse:<input type="text" id="txtAddress37" name="txtAddress[37]">Code postal:<input type="text" id="txtNPA37" name="txtNPA[37]">Ville:<input type="text" name="txtCity[37]" id="txtCity37">Prénom: <input type="text" name="txtFirstName[37]" id="txtFirstName37">Nom:<input type="text" name="txtLastName[37]" id="txtLastName37">Numéro de portable:<input type="text" name="txtPhone[37]" id="txtPhone37">Prof ou élève:<input type="text" name="txtprof[37]" id="txtprof37"><br>
+            Adresse:<input type="text" id="txtAddress38" name="txtAddress[38]">Code postal:<input type="text" id="txtNPA38" name="txtNPA[38]">Ville:<input type="text" name="txtCity[38]" id="txtCity38">Prénom: <input type="text" name="txtFirstName[38]" id="txtFirstName38">Nom:<input type="text" name="txtLastName[38]" id="txtLastName38">Numéro de portable:<input type="text" name="txtPhone[38]" id="txtPhone38">Prof ou élève:<input type="text" name="txtprof[38]" id="txtprof38"><br>
+            Adresse:<input type="text" id="txtAddress39" name="txtAddress[39]">Code postal:<input type="text" id="txtNPA39" name="txtNPA[39]">Ville:<input type="text" name="txtCity[39]" id="txtCity39">Prénom: <input type="text" name="txtFirstName[39]" id="txtFirstName39">Nom:<input type="text" name="txtLastName[39]" id="txtLastName39">Numéro de portable:<input type="text" name="txtPhone[39]" id="txtPhone39">Prof ou élève:<input type="text" name="txtprof[39]" id="txtprof39"><br>
+            Adresse:<input type="text" id="txtAddress40" name="txtAddress[40]">Code postal:<input type="text" id="txtNPA40" name="txtNPA[40]">Ville:<input type="text" name="txtCity[40]" id="txtCity40">Prénom: <input type="text" name="txtFirstName[40]" id="txtFirstName40">Nom:<input type="text" name="txtLastName[40]" id="txtLastName40">Numéro de portable:<input type="text" name="txtPhone[40]" id="txtPhone40">Prof ou élève:<input type="text" name="txtprof[40]" id="txtprof40"><br>
+            Adresse:<input type="text" id="txtAddress41" name="txtAddress[41]">Code postal:<input type="text" id="txtNPA41" name="txtNPA[41]">Ville:<input type="text" name="txtCity[41]" id="txtCity41">Prénom: <input type="text" name="txtFirstName[41]" id="txtFirstName41">Nom:<input type="text" name="txtLastName[41]" id="txtLastName41">Numéro de portable:<input type="text" name="txtPhone[41]" id="txtPhone41">Prof ou élève:<input type="text" name="txtprof[41]" id="txtprof41"><br>
+            Adresse:<input type="text" id="txtAddress42" name="txtAddress[42]">Code postal:<input type="text" id="txtNPA42" name="txtNPA[42]">Ville:<input type="text" name="txtCity[42]" id="txtCity42">Prénom: <input type="text" name="txtFirstName[42]" id="txtFirstName42">Nom:<input type="text" name="txtLastName[42]" id="txtLastName42">Numéro de portable:<input type="text" name="txtPhone[42]" id="txtPhone42">Prof ou élève:<input type="text" name="txtprof[42]" id="txtprof42"><br>
+            Adresse:<input type="text" id="txtAddress43" name="txtAddress[43]">Code postal:<input type="text" id="txtNPA43" name="txtNPA[43]">Ville:<input type="text" name="txtCity[43]" id="txtCity43">Prénom: <input type="text" name="txtFirstName[43]" id="txtFirstName43">Nom:<input type="text" name="txtLastName[43]" id="txtLastName43">Numéro de portable:<input type="text" name="txtPhone[43]" id="txtPhone43">Prof ou élève:<input type="text" name="txtprof[43]" id="txtprof43"><br>
+            Adresse:<input type="text" id="txtAddress44" name="txtAddress[44]">Code postal:<input type="text" id="txtNPA44" name="txtNPA[44]">Ville:<input type="text" name="txtCity[44]" id="txtCity44">Prénom: <input type="text" name="txtFirstName[44]" id="txtFirstName44">Nom:<input type="text" name="txtLastName[44]" id="txtLastName44">Numéro de portable:<input type="text" name="txtPhone[44]" id="txtPhone44">Prof ou élève:<input type="text" name="txtprof[44]" id="txtprof44"><br>
+            Adresse:<input type="text" id="txtAddress45" name="txtAddress[45]">Code postal:<input type="text" id="txtNPA45" name="txtNPA[45]">Ville:<input type="text" name="txtCity[45]" id="txtCity45">Prénom: <input type="text" name="txtFirstName[45]" id="txtFirstName45">Nom:<input type="text" name="txtLastName[45]" id="txtLastName45">Numéro de portable:<input type="text" name="txtPhone[45]" id="txtPhone45">Prof ou élève:<input type="text" name="txtprof[45]" id="txtprof45"><br>
+            Adresse:<input type="text" id="txtAddress46" name="txtAddress[46]">Code postal:<input type="text" id="txtNPA46" name="txtNPA[46]">Ville:<input type="text" name="txtCity[46]" id="txtCity46">Prénom: <input type="text" name="txtFirstName[46]" id="txtFirstName46">Nom:<input type="text" name="txtLastName[46]" id="txtLastName46">Numéro de portable:<input type="text" name="txtPhone[46]" id="txtPhone46">Prof ou élève:<input type="text" name="txtprof[46]" id="txtprof46"><br>
+            Adresse:<input type="text" id="txtAddress47" name="txtAddress[47]">Code postal:<input type="text" id="txtNPA47" name="txtNPA[47]">Ville:<input type="text" name="txtCity[47]" id="txtCity47">Prénom: <input type="text" name="txtFirstName[47]" id="txtFirstName47">Nom:<input type="text" name="txtLastName[47]" id="txtLastName47">Numéro de portable:<input type="text" name="txtPhone[47]" id="txtPhone47">Prof ou élève:<input type="text" name="txtprof[47]" id="txtprof47"><br>
+            Adresse:<input type="text" id="txtAddress48" name="txtAddress[48]">Code postal:<input type="text" id="txtNPA48" name="txtNPA[48]">Ville:<input type="text" name="txtCity[48]" id="txtCity48">Prénom: <input type="text" name="txtFirstName[48]" id="txtFirstName48">Nom:<input type="text" name="txtLastName[48]" id="txtLastName48">Numéro de portable:<input type="text" name="txtPhone[48]" id="txtPhone48">Prof ou élève:<input type="text" name="txtprof[48]" id="txtprof48"><br>
+            Adresse:<input type="text" id="txtAddress49" name="txtAddress[49]">Code postal:<input type="text" id="txtNPA49" name="txtNPA[49]">Ville:<input type="text" name="txtCity[49]" id="txtCity49">Prénom: <input type="text" name="txtFirstName[49]" id="txtFirstName49">Nom:<input type="text" name="txtLastName[49]" id="txtLastName49">Numéro de portable:<input type="text" name="txtPhone[49]" id="txtPhone49">Prof ou élève:<input type="text" name="txtprof[49]" id="txtprof49"><br>
         </div>
-
-
         <div id="divTransports" class="hidden">
             Les transports:<br>
             Rendez-vous:<input type="text" name="txtMeeting[00]" id="txtMeeting00">Départ:<input type="text" name="txtStart[00]" id="txtStart00">Arrivée:<input type="text" name="txtEnd[00]" id="txtEnd00">Numéro de vol:<input type="text" name="txtFlight[00]" id="txtFlight00">Numéro de train:<input type="text" name="txtTrain[00]" id="txtTrain00">Numéro de bus:<input type="text" name="txtBus[00]" id="txtBus00">Prix:<input type="text" name="txtPrice[00]" id="txtPrice00"><br>
@@ -150,8 +124,3 @@
         </div>
         <input type="submit" value="Ok" name="cmdSave"><input type="checkbox" name="showdata" title="Remise à zéro de tous les champs qui ne sont pas formatés correctement">Reset
     </form>
-<script src="js/reload.js"></script>
-
-
-</body>
-</html>
