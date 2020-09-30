@@ -6,6 +6,7 @@
     <title>Voyage</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <img src="pictures/logoCPNV.png" id="imgCPNV">
@@ -74,7 +75,7 @@
                 <input type="text" name="txtPhone[00]" id="txtPhone00">
                 <input type="checkbox" name="txtprof[00]" id="txtprof00">
             </div>
-            <button class="btnAdd" id="addParticipants"><span>+</span></button>
+            <button class="btn" id="addParticipants"><i class="fa fa-plus"></i></button>
         </div>
 
 

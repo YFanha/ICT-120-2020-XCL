@@ -111,66 +111,33 @@
     width: var(--width-checkbox);
 }
 
-.btnAdd{
+/*.btnAdd {
     height: 50px;
     width: 50px;
     margin: 10px;
-    /*border-radius: 100%;*/
-    border: 3px solid darkgray;
+    border-radius: 50%;
     cursor: pointer;
     font-size: 4em;
     text-align: center;
-}
-.plus{
-    transform: translateY(-10px);
-    position: absolute;
-}
 
+    /*background-image: url("../pictures/plus1.png");
+    background-position-x: center;
+    background-position-y: 1px;
+    background-size: 95%;
+    background-repeat: no-repeat;
+}*/
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    margin: 10px;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
 
 .hidden{
     display: none;
 }
-/***********************************/
-/*input[type=checkbox],
-.divLabels label:last-child{
-    width: var(--width-checkbox);
-}*/
-
-/*.container{
-    background-color: grey;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.divColumn{
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    height: 100%;
-    border: 2px solid black;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.divColumn label{
-    background-color: red;
-    text-align: center;
-    align-items: center;
-    font-size: 1.45em;
-}
-
-.divColumn input[type=text]{
-    text-align: center;
-    font-size: 1.1em;
-    margin-top: 5px;    
-}
-.divColumn input[type=checkbox]{
-    height: 40px;
-}
-
-.divColumn label,
-.divColumn input{
-    font-weight: bold;
-    height: 30px;
-}*/
