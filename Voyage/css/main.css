@@ -110,25 +110,8 @@
 .divInputs input[type=checkbox]{
     width: var(--width-checkbox);
 }
-
-/*.btnAdd {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 4em;
-    text-align: center;
-
-    /*background-image: url("../pictures/plus1.png");
-    background-position-x: center;
-    background-position-y: 1px;
-    background-size: 95%;
-    background-repeat: no-repeat;
-}*/
-
-.btn {
-    background-color: DodgerBlue;
+.btnAdd{
+    background-color: mediumseagreen;
     border: none;
     color: white;
     margin: 10px;
@@ -136,6 +119,10 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 50%;
+    display: block;
+}
+.icon{
+    font-size: 2em;
 }
 
 .hidden{

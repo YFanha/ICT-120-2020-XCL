@@ -75,10 +75,8 @@
                 <input type="text" name="txtPhone[00]" id="txtPhone00">
                 <input type="checkbox" name="txtprof[00]" id="txtprof00">
             </div>
-            <button class="btn" id="addParticipants"><i class="fa fa-plus"></i></button>
+
         </div>
-
-
         <div id="divTransports" class="hidden">
             Les transports:<br>
             Rendez-vous:<input type="text" name="txtMeeting[00]" id="txtMeeting00">Départ:<input type="text" name="txtStart[00]" id="txtStart00">Arrivée:<input type="text" name="txtEnd[00]" id="txtEnd00">Numéro de vol:<input type="text" name="txtFlight[00]" id="txtFlight00">Numéro de train:<input type="text" name="txtTrain[00]" id="txtTrain00">Numéro de bus:<input type="text" name="txtBus[00]" id="txtBus00">Prix:<input type="text" name="txtPrice[00]" id="txtPrice00"><br>
@@ -149,6 +147,7 @@
             Titre:<input type="text" name="txtTitle[08]" id="txtTitle08">Description:<textarea name="txtDesc[08]" id="txtDesc08"></textarea>Date:<input type="text" name="txtActDate[08]" id="txtActDate08">Heure:<input type="text" name="txtActTime[08]" id="txtActTime08">Prix:<input type="text" name="txtActPrice[08]" id="txtActPrice08">Transport:<input type="text" name="txtActTrsp[08]" id="txtActTrsp08">Rendez-vous:<input type="text" name="txtRDV[08]" id="txtRDV08">Image:<input type="text" name="txtActImg[08]" id="txtActImg08"><img id="imgActImg08" class="actimg" /><br>
             Titre:<input type="text" name="txtTitle[09]" id="txtTitle09">Description:<textarea name="txtDesc[09]" id="txtDesc09"></textarea>Date:<input type="text" name="txtActDate[09]" id="txtActDate09">Heure:<input type="text" name="txtActTime[09]" id="txtActTime09">Prix:<input type="text" name="txtActPrice[09]" id="txtActPrice09">Transport:<input type="text" name="txtActTrsp[09]" id="txtActTrsp09">Rendez-vous:<input type="text" name="txtRDV[09]" id="txtRDV09">Image:<input type="text" name="txtActImg[09]" id="txtActImg09"><img id="imgActImg09" class="actimg" /><br>
         </div>
+        <button class="btnAdd" id="addParticipants"><i class="fa fa-plus icon"></i></button>
         <input type="submit" value="Ok" name="cmdSave"><input type="checkbox" name="showdata" title="Remise à zéro de tous les champs qui ne sont pas formatés correctement">Reset
     </form>
 <script src="js/reload.js"></script>
