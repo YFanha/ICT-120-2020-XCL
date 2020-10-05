@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnHebergement = document.getElementById('btnHebergement');
     const btnActivites = document.getElementById('btnActivites');
 
+    add('addParticipants');
+
     const divParticipants = document.getElementById('divParticipants');
     const divTransports = document.getElementById('divTransports');
     const divHebergement =  document.getElementById('divHebergement');
@@ -14,28 +16,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     btnParticipants.addEventListener('click', function (){
         divParticipants.classList.remove('hidden');
-        removeHidden(divTransports, divHebergement, divActivites);
+        hideElements(divTransports, divHebergement, divActivites);
+        add('addParticipants');
     });
 
     btnTransports.addEventListener('click', function (){
         divTransports.classList.remove('hidden');
-        removeHidden(divParticipants, divHebergement, divActivites);
+        hideElements(divParticipants, divHebergement, divActivites);
+        add('addTransports');
     });
 
     btnHebergement.addEventListener('click', function (){
         divHebergement.classList.remove('hidden');
-        removeHidden(divParticipants, divTransports, divActivites);
+        hideElements(divParticipants, divTransports, divActivites);
     });
 
     btnActivites.addEventListener('click', function (){
         divActivites.classList.remove('hidden');
-        removeHidden(divParticipants, divTransports, divHebergement);
+        hideElements(divParticipants, divTransports, divHebergement);
+        add('addActivites');
     });
 
     //add the class to hide the element
-    function removeHidden(divOne, divTwo, divThree){
+    function hideElements(divOne, divTwo, divThree){
         divOne.classList.add('hidden');
         divTwo.classList.add('hidden');
         divThree.classList.add('hidden');
     }
+
+    function add(btn){
+        const btnAdd = document.getElementById(btn);
+        console.log(btn);
+        btnAdd.addEventListener('click', function (){
+
+            if(btn === 'addParticipants')
+            {
+                
+            }
+            else if(btn === 'addTransports')
+            {
+
+            }
+            else if(btn === 'addActivites')
+            {
+
+            }
+
+        })
+    }
+
 });
