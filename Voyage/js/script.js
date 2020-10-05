@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if(btn === 'addParticipants')
             {
-                
+
             }
             else if(btn === 'addTransports')
             {
