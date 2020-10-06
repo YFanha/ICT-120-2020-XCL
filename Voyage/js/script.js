@@ -11,12 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const divHebergement =  document.getElementById('divHebergement');
     const divActivites = document.getElementById('divActivites');
 
+
     //afficher le menu des participants au chargement de la page
     divParticipants.classList.remove('hidden');
 
     btnParticipants.addEventListener('click', function (){
         divParticipants.classList.remove('hidden');
-        hideElements(divTransports, divHebergement, divActivites);
+        hideElements(divTransports, divHebergement, divActivites, );
         add('addParticipants');
     });
 
@@ -44,6 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
         divThree.classList.add('hidden');
     }
 
+    let idParticipants = 1;
+    let idTransports = 1;
+    let idActivites = 1;
+
+    //add row to form
     function add(btn){
         const btnAdd = document.getElementById(btn);
         console.log(btn);
@@ -51,7 +57,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if(btn === 'addParticipants')
             {
+                element = `<div class="divInputs">
+                        <input type="text" id="txtAddress${idParticipants}" name="txtAddress[${idParticipants}]">
+                        <input type="text" id="txtNPA${idParticipants}" name="txtNPA[${idParticipants}]">
+                        <input type="text" name="txtCity[${idParticipants}]" id="txtCity${idParticipants}">
+                        <input type="text" name="txtFirstName[${idParticipants}]" id="txtFirstName${idParticipants}">
+                        <input type="text" name="txtLastName[${idParticipants}]" id="txtLastName${idParticipants}">
+                        <input type="text" name="txtPhone[${idParticipants}]" id="txtPhone${idParticipants}">
+                        <input type="checkbox" name="txtprof[${idParticipants}]" id="txtprof${idParticipants}">
+                    </div>`
 
+                idParticipants++;
+
+                divParticipants.insertAdjacentHTML("beforeend", element)
             }
             else if(btn === 'addTransports')
             {

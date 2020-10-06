@@ -44,8 +44,10 @@
                 <input type="text" name="txtPhone[00]" id="txtPhone00">
                 <input type="checkbox" name="txtprof[00]" id="txtprof00">
             </div>
-            <button type="button" class="btnAdd" id="addParticipants"><i class="fa fa-plus"></i></button>
         </div>
+        <button type="button" class="btnAdd" id="addParticipants"><i class="fa fa-plus"></i></button>
+
+
         <div id="divTransports" class="hidden">
             Les transports:<br>
             Rendez-vous:<input type="text" name="txtMeeting[00]" id="txtMeeting00">Départ:<input type="text" name="txtStart[00]" id="txtStart00">Arrivée:<input type="text" name="txtEnd[00]" id="txtEnd00">Numéro de vol:<input type="text" name="txtFlight[00]" id="txtFlight00">Numéro de train:<input type="text" name="txtTrain[00]" id="txtTrain00">Numéro de bus:<input type="text" name="txtBus[00]" id="txtBus00">Prix:<input type="text" name="txtPrice[00]" id="txtPrice00"><br>
@@ -79,8 +81,9 @@
             Rendez-vous:<input type="text" name="txtMeeting[28]" id="txtMeeting28">Départ:<input type="text" name="txtStart[28]" id="txtStart28">Arrivée:<input type="text" name="txtEnd[28]" id="txtEnd28">Numéro de vol:<input type="text" name="txtFlight[28]" id="txtFlight28">Numéro de train:<input type="text" name="txtTrain[28]" id="txtTrain28">Numéro de bus:<input type="text" name="txtBus[28]" id="txtBus28">Prix:<input type="text" name="txtPrice[28]" id="txtPrice28"><br>
             Rendez-vous:<input type="text" name="txtMeeting[29]" id="txtMeeting29">Départ:<input type="text" name="txtStart[29]" id="txtStart29">Arrivée:<input type="text" name="txtEnd[29]" id="txtEnd29">Numéro de vol:<input type="text" name="txtFlight[29]" id="txtFlight29">Numéro de train:<input type="text" name="txtTrain[29]" id="txtTrain29">Numéro de bus:<input type="text" name="txtBus[29]" id="txtBus29">Prix:<input type="text" name="txtPrice[29]" id="txtPrice29"><br>
 
-            <button type="button" class="btnAdd" id="addTransports"><i class="fa fa-plus"></i></button>
         </div>
+        <button type="button" class="btnAdd" id="addTransports"><i class="fa fa-plus"></i></button>
+
         <div id="divHebergement" class="hidden">
             Le logement:<br>
             Hotel: <input type="text" name="txtHotelData[00]" id="txtHotelData00"><br>
@@ -104,8 +107,10 @@
             Chambre:<input type="text" name="txtRoom[12]" id="txtRoom12">Etage:<input type="text" name="txtFloor[12]" id="txtFloor12">Max personnes:<input type="text" name="txtCapacity[12]" id="txtCapacity12">Occupant1:<input type="text" name="txtOcc1[12]" id="txtOcc112">Occupant2:<input type="text" name="txtOcc2[12]" id="txtOcc212">Occupant3:<input type="text" name="txtOcc3[12]" id="txtOcc312">Occupant4:<input type="text" name="txtOcc4[12]" id="txtOcc412"><br>
             Chambre:<input type="text" name="txtRoom[13]" id="txtRoom13">Etage:<input type="text" name="txtFloor[13]" id="txtFloor13">Max personnes:<input type="text" name="txtCapacity[13]" id="txtCapacity13">Occupant1:<input type="text" name="txtOcc1[13]" id="txtOcc113">Occupant2:<input type="text" name="txtOcc2[13]" id="txtOcc213">Occupant3:<input type="text" name="txtOcc3[13]" id="txtOcc313">Occupant4:<input type="text" name="txtOcc4[13]" id="txtOcc413"><br>
             Chambre:<input type="text" name="txtRoom[14]" id="txtRoom14">Etage:<input type="text" name="txtFloor[14]" id="txtFloor14">Max personnes:<input type="text" name="txtCapacity[14]" id="txtCapacity14">Occupant1:<input type="text" name="txtOcc1[14]" id="txtOcc114">Occupant2:<input type="text" name="txtOcc2[14]" id="txtOcc214">Occupant3:<input type="text" name="txtOcc3[14]" id="txtOcc314">Occupant4:<input type="text" name="txtOcc4[14]" id="txtOcc414"><br>
-            <button type="button" class="btnAdd" id="addHebergement"><i class="fa fa-plus"></i></button>
         </div>
+        <button type="button" class="btnAdd" id="addHebergement"><i class="fa fa-plus"></i></button>
+
+
         <div id="divActivites" class="hidden">
             Les activités sur place<br>
             Titre:<input type="text" name="txtTitle[00]" id="txtTitle00">Description:<textarea name="txtDesc[00]" id="txtDesc00"></textarea>Date:<input type="text" name="txtActDate[00]" id="txtActDate00">Heure:<input type="text" name="txtActTime[00]" id="txtActTime00">Prix:<input type="text" name="txtActPrice[00]" id="txtActPrice00">Transport:<input type="text" name="txtActTrsp[00]" id="txtActTrsp00">Rendez-vous:<input type="text" name="txtRDV[00]" id="txtRDV00">Image:<input type="text" name="txtActImg[00]" id="txtActImg00"><img id="imgActImg00" class="actimg" /><br>
@@ -119,8 +124,9 @@
             Titre:<input type="text" name="txtTitle[08]" id="txtTitle08">Description:<textarea name="txtDesc[08]" id="txtDesc08"></textarea>Date:<input type="text" name="txtActDate[08]" id="txtActDate08">Heure:<input type="text" name="txtActTime[08]" id="txtActTime08">Prix:<input type="text" name="txtActPrice[08]" id="txtActPrice08">Transport:<input type="text" name="txtActTrsp[08]" id="txtActTrsp08">Rendez-vous:<input type="text" name="txtRDV[08]" id="txtRDV08">Image:<input type="text" name="txtActImg[08]" id="txtActImg08"><img id="imgActImg08" class="actimg" /><br>
             Titre:<input type="text" name="txtTitle[09]" id="txtTitle09">Description:<textarea name="txtDesc[09]" id="txtDesc09"></textarea>Date:<input type="text" name="txtActDate[09]" id="txtActDate09">Heure:<input type="text" name="txtActTime[09]" id="txtActTime09">Prix:<input type="text" name="txtActPrice[09]" id="txtActPrice09">Transport:<input type="text" name="txtActTrsp[09]" id="txtActTrsp09">Rendez-vous:<input type="text" name="txtRDV[09]" id="txtRDV09">Image:<input type="text" name="txtActImg[09]" id="txtActImg09"><img id="imgActImg09" class="actimg" /><br>
 
-            <button type="button" class="btnAdd" id="addActivites"><i class="fa fa-plus"></i></button>
         </div>
+        <button type="button" class="btnAdd" id="addActivites"><i class="fa fa-plus"></i></button>
+
         <input type="submit" value="Ok" name="cmdSave"><input type="checkbox" name="showdata" title="Remise à zéro de tous les champs qui ne sont pas formatés correctement">Reset
     </form>
 <script src="js/reload.js"></script>
