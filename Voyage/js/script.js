@@ -4,7 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnHebergement = document.getElementById('btnHebergement');
     const btnActivites = document.getElementById('btnActivites');
 
-    add('addParticipants');
+    const addParticipants = document.getElementById('addParticipants');
+    const addTransports = document.getElementById('addTransports');
+    const addHebergement = document.getElementById('addHebergement');
+    const addActivites = document.getElementById('addActivites');
+
+    /*const addParticipants = 'addParticipants';
+    const addTransports = 'addTransports';
+    const addHebergement = 'addHebergement';
+    const addActivites = 'addActivites';*/
+    const HIDDEN = 'hidden';
+    let idParticipants = 0;
 
     const divParticipants = document.getElementById('divParticipants');
     const divTransports = document.getElementById('divTransports');
@@ -14,28 +24,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //afficher le menu des participants au chargement de la page
     divParticipants.classList.remove('hidden');
+    addParticipants.classList.remove(HIDDEN);
 
     btnParticipants.addEventListener('click', function (){
         divParticipants.classList.remove('hidden');
-        hideElements(divTransports, divHebergement, divActivites, );
-        add('addParticipants');
+        addParticipants.classList.remove(HIDDEN);
+        hideElements(divTransports, divHebergement, divActivites);
+        hideButtons(addTransports,addHebergement,addActivites);
     });
 
     btnTransports.addEventListener('click', function (){
         divTransports.classList.remove('hidden');
+        addTransports.classList.remove(HIDDEN);
         hideElements(divParticipants, divHebergement, divActivites);
-        add('addTransports');
+        hideButtons(addParticipants,addHebergement,addActivites);
     });
 
     btnHebergement.addEventListener('click', function (){
         divHebergement.classList.remove('hidden');
+        addHebergement.classList.remove(HIDDEN);
         hideElements(divParticipants, divTransports, divActivites);
+        hideButtons(addTransports,addParticipants,addActivites);
     });
 
     btnActivites.addEventListener('click', function (){
         divActivites.classList.remove('hidden');
+        addActivites.classList.remove(HIDDEN);
         hideElements(divParticipants, divTransports, divHebergement);
-        add('addActivites');
+        hideButtons(addTransports,addHebergement,addParticipants);
     });
 
     //add the class to hide the element
@@ -44,20 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
         divTwo.classList.add('hidden');
         divThree.classList.add('hidden');
     }
+    function hideButtons(a,b,c){
+        a.classList.add(HIDDEN);
+        b.classList.add(HIDDEN);
+        c.classList.add(HIDDEN);
+    }
+    addParticipants.addEventListener("click", function(){
 
-    let idParticipants = 1;
-    let idTransports = 1;
-    let idActivites = 1;
-
-    //add row to form
-    function add(btn){
-        const btnAdd = document.getElementById(btn);
-        console.log(btn);
-        btnAdd.addEventListener('click', function (){
-
-            if(btn === 'addParticipants')
-            {
-                element = `<div class="divInputs">
+        element = `<div class="divInputs">
                         <input type="text" id="txtAddress${idParticipants}" name="txtAddress[${idParticipants}]">
                         <input type="text" id="txtNPA${idParticipants}" name="txtNPA[${idParticipants}]">
                         <input type="text" name="txtCity[${idParticipants}]" id="txtCity${idParticipants}">
@@ -67,20 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         <input type="checkbox" name="txtprof[${idParticipants}]" id="txtprof${idParticipants}">
                     </div>`
 
-                idParticipants++;
+        idParticipants++;
 
-                divParticipants.insertAdjacentHTML("beforeend", element)
-            }
-            else if(btn === 'addTransports')
-            {
+        divParticipants.insertAdjacentHTML("beforeend", element)
+    })
+    addTransports.addEventListener("click", function(){
 
-            }
-            else if(btn === 'addActivites')
-            {
+    })
+    addHebergement.addEventListener("click", function(){
 
-            }
+    })
+    addActivites.addEventListener("click", function(){
 
-        })
-    }
+    })
+
 
 });

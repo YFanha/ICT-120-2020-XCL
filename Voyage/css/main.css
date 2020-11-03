@@ -128,3 +128,33 @@
 .hidden{
     display: none;
 }
+
+.label{
+}
+
+.inputLogement{
+}
+
+.label,
+.inputLogement{
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+}
+
+#divLogement{
+    padding: 5px;
+}
+
+#champLogement{
+    margin-left: 50px;
+    width: 15%;
+}
+
+.ligneChampLogement{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
